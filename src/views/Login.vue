@@ -1,6 +1,10 @@
 <script setup>
 import { ref, reactive, watch } from 'vue'
 import { User, Lock } from '@element-plus/icons-vue'
+import { login } from '../api/login.js'
+import { ElMessage } from 'element-plus'
+import {CONFIG} from '../config/index.js'
+
 const loginData = reactive({
 	username: '',
 	password: ''
@@ -30,12 +34,28 @@ watch([()=> loginData.username, ()=>loginData.password],() => {
 })
 
 const onSubmit = () => {
-	console.log('data', loginData)
+	login(loginData.username, loginData.password).then((response)=>{
+		console.log(response)
+		if (response.code === 200 ) {
+			ElMessage({
+				message: '登录成功',
+				type: 'success'
+			})
+			// 存储token到本地浏览器storage中
+			window.localStorage.setItem(CONFIG.TOKEN_NAME, response.data.access)
+		} else {
+			ElMessage({
+				message: response.msg,
+				type: 'error'
+			})
+		}
+	})
 }
 </script>
 
 <template>
 	<el-card class="box-card">
+		<h2>后台管理系统</h2>
 		<el-form
 			ref="loginRef"
 			:model="loginData"
