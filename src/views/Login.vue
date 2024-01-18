@@ -4,11 +4,13 @@ import { User, Lock } from '@element-plus/icons-vue'
 import { login } from '../api/login.js'
 import { ElMessage } from 'element-plus'
 import {CONFIG} from '../config/index.js'
+import { useRouter } from 'vue-router'
 
 const loginData = reactive({
 	username: '',
 	password: ''
 })
+const router = useRouter()
 const loginRef = ref()
 const rules = reactive({
 	username: [
@@ -43,11 +45,7 @@ const onSubmit = () => {
 			})
 			// 存储token到本地浏览器storage中
 			window.localStorage.setItem(CONFIG.TOKEN_NAME, response.data.access)
-		} else {
-			ElMessage({
-				message: response.msg,
-				type: 'error'
-			})
+			router.replace('/')
 		}
 	})
 }
