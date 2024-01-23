@@ -52,38 +52,40 @@ const onSubmit = () => {
 </script>
 
 <template>
-	<el-card class="box-card">
-		<h2>后台管理系统</h2>
-		<el-form
-			ref="loginRef"
-			:model="loginData"
-			:rules="rules"
-			status-icon
-		>
-    <el-form-item
-			prop="username"
-
-		>
-      <el-input v-model="loginData.username" placeholder="用户名" clearable :prefix-icon="User" />
-    </el-form-item>
+	<div id="login" style="width: 100vw;">
+		<el-card class="box-card">
+			<h2>后台管理系统</h2>
+			<el-form
+				ref="loginRef"
+				:model="loginData"
+				:rules="rules"
+			>
 		<el-form-item
-			prop="password"
-			autocapitalize="off"
+				prop="username"
+				class="form-item"
 
-		>
-      <el-input
+			>
+		<el-input v-model="loginData.username" placeholder="用户名" clearable :prefix-icon="User" />
+		</el-form-item>
+			<el-form-item
+				prop="password"
+				autocapitalize="off"
+				class="form-item"
+			>
+			<el-input
 				v-model="loginData.password"
 				type="password"
 				placeholder="密码"
 				show-password
 				:prefix-icon="Lock"
 			/>
-    </el-form-item>
-    <el-form-item>
-      <el-button :disabled="loginButtenDisable" type="primary" @click="onSubmit">登录</el-button>
-    </el-form-item>
-  </el-form>
-	</el-card>
+		</el-form-item>
+		<el-form-item>
+		<el-button style="margin: 0 auto;" :disabled="loginButtenDisable" type="primary" @click="onSubmit">登录</el-button>
+		</el-form-item>
+	</el-form>
+		</el-card>
+	</div>
 </template>
 
 <style scoped>
@@ -97,5 +99,12 @@ const onSubmit = () => {
 
 .box-card {
   width: 480px;
+  margin: 0 auto;
+  
+}
+
+.form-item {
+	width: 300px;
+	margin: 0 auto 20px auto;
 }
 </style>

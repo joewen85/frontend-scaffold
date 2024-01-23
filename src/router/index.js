@@ -4,6 +4,7 @@ import { CONFIG } from '../config/index.js'
 // const user = () => import('../vues/User.vue')
 const Login = () => import('../views/Login.vue')
 const Index = () => import('../views/Index.vue')
+const Home = () => import('../layout/index.vue')
 
 const listRoutes = {
 
@@ -19,6 +20,11 @@ const routes = [
         path: '/',
         component: Index,
         name: 'index'
+    },
+    {
+        path: '/home',
+        component: Home,
+        name: 'home'
     }
 
 ]
