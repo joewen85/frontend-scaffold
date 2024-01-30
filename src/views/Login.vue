@@ -81,7 +81,7 @@ const onSubmit = () => {
 			/>
 		</el-form-item>
 		<el-form-item>
-		<el-button style="margin: 0 auto;" :disabled="loginButtenDisable" type="primary" @click="onSubmit">登录</el-button>
+		<el-button style="margin: 10px auto 10px auto;" :disabled="loginButtenDisable" type="primary" @click="onSubmit">登录</el-button>
 		</el-form-item>
 	</el-form>
 		</el-card>
