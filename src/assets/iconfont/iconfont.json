@@ -1,0 +1,30 @@
+{
+  "id": "4420986",
+  "name": "front",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "前端脚手架项目",
+  "glyphs": [
+    {
+      "icon_id": "8548182",
+      "name": "数码产品",
+      "font_class": "shumachanpin",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "7473686",
+      "name": "订单管理",
+      "font_class": "dingdanguanli",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "4329914",
+      "name": "用户管理",
+      "font_class": "yonghuguanli",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    }
+  ]
+}
