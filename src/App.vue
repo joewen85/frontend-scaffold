@@ -2,10 +2,16 @@
 </script>
 
 <template>
-  <router-view></router-view>
+    <router-view></router-view>
 </template>
 
-<style scoped>
+<style>
+#app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
