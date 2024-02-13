@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <el-footer>Footer</el-footer>
+  <!-- <el-footer>Footer</el-footer> -->
 </template>
 
 <style scoped>

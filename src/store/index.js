@@ -20,3 +20,24 @@ export const useStoreDemo = defineStore('StoreDemo', {
         }
     }
 })
+
+
+export const useIsCollapse = defineStore('isCollapse', {
+    // 容器内容
+    // state: 用于存储全局状态/数据, 可理解为数据配置的位置
+    // data
+    state: ()=> {
+        return {
+            isCollapse: false
+        }
+    },
+    // 相当于计算属性
+    getters: {},
+    // 定义修改数据的方法
+    // 相当于methods
+    actions: {
+        changeIsCollapse(){
+            this.isCollapse = !this.isCollapse
+        }
+    }
+})

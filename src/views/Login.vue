@@ -45,7 +45,7 @@ const onSubmit = () => {
 			})
 			// 存储token到本地浏览器storage中
 			window.localStorage.setItem(CONFIG.TOKEN_NAME, response.data.access)
-			router.replace('/')
+			router.replace('/home')
 		}
 	})
 }

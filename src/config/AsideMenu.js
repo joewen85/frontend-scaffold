@@ -13,12 +13,12 @@ export const AsideMenu = [
     {
         title: '产品管理',
         index: '/products',
-        icon: "",
+        icon: "iconfont icon-ziyuan",
         subMenus: [
             {
                 title: '衣服',
                 index: '/products/clothes',
-                icon: '',
+                icon: "iconfont icon-zhuti_yifu",
                 items: [
                     {
                         title: '衣服添加',

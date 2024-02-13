@@ -6,6 +6,20 @@
   "description": "前端脚手架项目",
   "glyphs": [
     {
+      "icon_id": "8085219",
+      "name": "产品管理",
+      "font_class": "ziyuan",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "5387493",
+      "name": "主题_衣服",
+      "font_class": "zhuti_yifu",
+      "unicode": "eaeb",
+      "unicode_decimal": 60139
+    },
+    {
       "icon_id": "8548182",
       "name": "数码产品",
       "font_class": "shumachanpin",
